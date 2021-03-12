@@ -1,0 +1,102 @@
+<div class="container-fluid align-self-center mt-5" >
+    <div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+              <h2 class="card-title">AM ADD</h2>
+<div *ngIf="!signBoolupdate">
+    <button mat-flat-button class="ml-4 container btnchange" (click)="sign()">{{btnAdmiText}}</button>
+
+    <div class="container mt-4" *ngIf="!signBool">
+      <br>
+      <br>
+      <table mat-table [dataSource]="dataSourceadmin" class="mat-elevation-z8">
+
+
+
+        <ng-container matColumnDef="Email">
+          <th mat-header-cell *matHeaderCellDef> Emaill </th>
+          <td mat-cell *matCellDef="let element"> {{element.Email}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="JoinDate">
+          <th mat-header-cell *matHeaderCellDef> Datee </th>
+          <td mat-cell *matCellDef="let element"> {{element.JoinDate | date :'fullDate' }} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="Delete">
+          <th mat-header-cell *matHeaderCellDef> Delete </th>
+          <td mat-cell *matCellDef="let element">
+            <button mat-flat-button class=" btndelet" (click)="delete(element.id)">Delete</button>
+          </td>
+        </ng-container>
+
+        <ng-container matColumnDef="Update">
+          <th mat-header-cell *matHeaderCellDef> Update </th>
+          <td mat-cell *matCellDef="let element">
+            <button mat-flat-button class=" btndelet" (click)="updatebtn(element)" >Update</button>
+          </td>
+        </ng-container>
+
+
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumnsadmin"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumnsadmin;"></tr>
+      </table>
+
+    </div>
+  
+  <div *ngIf="signBool">
+    <mat-form-field appearance="outline" class="w-75">
+      <input matInput placeholder="Email Address" class="mb-2" [formControl]="Email" required>
+      <mat-error *ngIf="Email.invalid && (Email.dirty || Email.touched)">{{getErrorMessage()}}</mat-error>
+      <!-- <input matInput placeholder="Email Address" class="mb-2"> -->
+      <mat-icon matSuffix class=""><i class="far fa-envelope faico"></i></mat-icon>
+    </mat-form-field>
+
+
+    <mat-form-field appearance="outline" class="w-75 ">
+      <input matInput placeholder="Password" class="mb-2" [formControl]="Password" required>
+      <mat-error *ngIf="Password.invalid && (Password.dirty || Password.touched)">{{getErrorMessagepass()}}</mat-error>
+      <!-- <input matInput placeholder="Password" class="mb-2"> -->
+      <mat-icon matSuffix><i class="far fa-eye-slash faico"></i>
+      </mat-icon>
+    </mat-form-field>
+    <button mat-flat-button class="ml-4 container btnsign" (click)="signupp()">SignUp</button>
+
+  </div>
+  </div>
+<!-- /////////////////////////// add sign ///////////////////// -->
+<!-- /////////////// updae admin ///////////// -->
+<div *ngIf="signBoolupdate">
+<form [formGroup]="adminFrm">
+  <div class="form-group row">
+    <label for="id" class="col-sm-2 col-form-label">Id</label>
+    <div class="col-10">
+      <input readonly type="text" value={{admininfo.id}} formControlName="id" class="form-control">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="Email" class="col-sm-2 col-form-label">Email</label>
+    <div class="col-10">
+      <input type="text" value={{admininfo.Email}} formControlName="Email" class="form-control"/>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="JoinDate" class="col-sm-2 col-form-label">Dates</label>
+    <div class="col-10">
+      <input type="text"  formControlName="JoinDate" class="form-control">
+    </div>
+  </div>
+ 
+  
+
+
+</form>
+<input type="submit" value="Updatee" id="TourAdd" (click)="updateeadmin()" class="btn"
+  style="background-color:  #ff5722;color: white;" />
+<hr>
+</div>
+
+</div></div></div></div></div>
+<!-- /////////// admin updae ////// -->

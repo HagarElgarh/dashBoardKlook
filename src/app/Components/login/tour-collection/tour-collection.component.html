@@ -1,0 +1,499 @@
+<div class="container-fluid">
+  <!-- ============================================================== -->
+  <!-- Top Add start -->
+  <!-- ============================================================== -->
+  <div class="row page-titles">
+    <div class="col-md-5 align-self-center">
+      <h4 class="text-themecolor">Tour List</h4>
+    </div>
+    <div class="col-md-7 align-self-center text-right">
+      <div class="d-flex justify-content-end align-items-center">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a href="javascript:void(0)">Administration</a>
+          </li>
+          <li class="breadcrumb-item active">Tour List</li>
+        </ol>
+        <button
+          (click)="changeView()"
+          type="button"
+          [ngStyle]="{ 'background-color': getColor() }"
+          class="btn btnColor d-none d-lg-block m-l-15"
+        >
+          <i class="fa iconColor fa-plus-circle mr-2"></i>{{ btnCreate }}
+        </button>
+      </div>
+    </div>
+  </div>
+  <!-- ============================================================== -->
+  <!-- Top Add end -->
+  <!-- ============================================================== -->
+
+  <!-- ============================================================== -->
+  <!-- Start Add Page -->
+  <!-- ============================================================== -->
+
+  <div class="row" *ngIf="formsBool">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-body">
+          <h2 class="card-title">Tour ADD</h2>
+          <form [formGroup]="loginFrm">
+            <div class="form-row">
+              <div class="col-md-3 mb-3 form-group">
+                <label for="TourID">ID</label>
+
+                <input type="text" formControlName="id" class="form-control" readonly/>
+              </div>
+              <div class="col-md-3 mb-3 form-group">
+                <label for="TourTitle">Title</label>
+
+                <input
+                  type="text"
+                  formControlName="Title"
+                  class="form-control"
+                />
+              </div>
+              <div class="col-md-3 mb-3 form-group">
+                <label for="TourDate">Date</label>
+
+                <input
+                  type="text"
+                  formControlName="Date"
+                  class="form-control"
+                />
+              </div>
+              <div class="col-md-3 mb-3 form-group">
+                <label for="TourDistance">Distance</label>
+
+                <input
+                  type="text"
+                  class="form-control"
+                  id="TourDistance"
+                  placeholder="Distance"
+                />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="col-md-3 mb-3 form-group">
+                <label for="TourImage">Image</label>
+
+                <input
+                  type="text"
+                  formControlName="Image"
+                  class="form-control"
+                />
+              </div>
+              <div class="col-md-3 mb-3 form-group">
+                <label for="TourRate">Rate</label>
+
+                <input
+                  type="text"
+                  formControlName="Rate"
+                  class="form-control"
+                />
+              </div>
+              <div class="col-md-3 mb-3 form-group">
+                <label for="TourReviews">Reviews</label>
+
+                <input
+                  type="text"
+                  formControlName="Review"
+                  class="form-control"
+                />
+              </div>
+              <div class="col-md-3 mb-3 form-group">
+                <label for="TourBooked">Booked</label>
+
+                <input
+                  type="text"
+                  formControlName="Booked"
+                  class="form-control"
+                />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="col-md-3 mb-3 form-group">
+                <label for="TourPrice">Price</label>
+
+                <input
+                  type="text"
+                  formControlName="Price"
+                  class="form-control"
+                />
+              </div>
+              <div class="col-md-3 mb-3 form-group">
+                <label for="TourOldPrice">Old Price</label>
+
+                <input
+                  type="text"
+                  formControlName="OldPrice"
+                  class="form-control"
+                />
+              </div>
+              <div class="col-md-3 mb-3 form-group">
+                <label for="TourDiscount">Discount</label>
+
+                <input
+                  type="text"
+                  formControlName="TourDiscount"
+                  class="form-control"
+                />
+              </div>
+              <div class="col-md-3 mb-3 form-group">
+                <label for="TourSectionInner">Section Inner</label>
+
+                <input
+                  type="text"
+                  formControlName="TourSectionInner"
+                  class="form-control"
+                />
+              </div>
+            </div>
+
+            <div class="form-row"> 
+                <div class="col-md-4 mb-3 form-group">
+                    <label  for="TourCity">City</label>
+                    <!-- <div class="col-10">City -->
+                      <select class="form-control" formControlName="City" id="City">
+                        <option></option>
+                        <option>Hong Kong</option>
+                        <option>Macau</option>
+                        <option>Cairo</option>
+                        <option>Alex</option>
+                        <option>Shar El Sheikh</option>
+                        <option>Hurghada</option>
+                        <option>Taipei</option>
+                        <option>Singapore</option>
+                        <option>Bangkok</option>
+                        <option>Pattaya</option>
+                        <option>New York</option>
+                        <option>Hokkaido</option>
+                        <option>Cape Town</option>
+                        <option>Rotorua</option>
+                        <option>Siem Reap</option>
+                        <option>Beijing</option>
+                        <option>Barcelona</option>
+                        <option>Hurghada</option>
+        
+        
+        
+                      </select>
+                    <!-- </div> -->
+                  </div>
+                  <div class="col-md-4 mb-3 form-group">
+                    <label  for="TourCategories">Categories</label>
+                    <!-- <div class="col-10"> -->
+                      <select class="form-control" formControlName="Categories" id="Categories">
+                        <option>Home</option>
+                        <option>Relaxation & beauty</option>
+                        <option>Cultural experiences</option>
+                        <option>FunNight</option>
+                        <option>Tours</option>
+                        <option>Europe Train</option>
+                        <option>Food</option>
+                        <option>Experience</option>
+        
+        
+                      </select>
+                    <!-- </div> -->
+                  </div>
+                  <div class="col-md-4 mb-3 form-group">
+                    <label  for="TourSection">Section</label>
+                    <!-- <div class="col-10"> -->
+                      <select class="form-control" formControlName="Section" id="Section">
+                        <option>Get Inspired</option>
+        
+                        <option>Top thing to do</option>
+        
+                        <option>BestSeller</option>
+                        <option>AwsomeDeals</option>
+                        <option>Date Ideas</option>
+                        <option>ForKids</option>
+                        <option>For Tommowrow</option>
+                        <option>Klook Recommended</option>
+                        <option>Near in cairo</option>
+                        <option>Other</option>
+        
+        
+                      </select>
+                    <!-- </div> -->
+                  </div>
+            </div>       
+
+            <button
+              class="btn btn-primary"
+              (click)="addTour()"
+              [ngStyle]="{ 'background-color': getColor() }"
+              type="submit"
+            >
+              Submit form
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================== -->
+  <!-- End Add Page -->
+  <!-- ============================================================== -->
+
+  <!-- ============================================================== -->
+  <!-- Start List Page -->
+  <!-- ============================================================== -->
+
+  <div *ngIf="!formsBool">
+    <div class="card" *ngIf="!formsUpdate">
+      <div class="card-body">
+        <h2 class="card-title">Tour List</h2>
+        <!-- <h6 class="card-subtitle">Add class <code>.color-table .danger-table</code></h6> -->
+        <div class="table-responsive">
+          <table class="table color-table">
+            <thead [ngStyle]="{ 'background-color': getColor() }">
+              <tr>
+                <th>#</th>
+                <th>Title</th>
+                <th>City</th>
+                <th>Categories</th>
+                
+                <th>Edit</th>
+                <th>Delete</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let item of dataSourceadmin">
+                <td>1</td>
+                <td>{{item.Title}}</td>
+                <td>{{item.City}}</td>
+                <td>{{item.Categories}}</td>
+                
+                
+                <td>
+                 
+                    <i class="fas fa-pencil-alt" (click)="updateTour(item)" ></i>
+                 
+                </td>
+                <td> 
+                   
+                  <i class="fas fa-trash-alt" (click)="deleteTour(item.id)"></i>
+                </td>
+              </tr>
+             
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+        <div class="card" *ngIf="formsUpdate">
+          <div class="card-body">
+            <h2 class="card-title">Tour ADD</h2>
+            <form [formGroup]="updateFrm">
+              <div class="form-row">
+                <div class="col-md-3 mb-3 form-group">
+                  <label for="TourID">ID</label>
+  
+                  <input type="text" formControlName="id" class="form-control" readonly/>
+                </div>
+                <div class="col-md-3 mb-3 form-group">
+                  <label for="TourTitle">Title</label>
+  
+                  <input
+                    type="text"
+                    formControlName="Title"
+                    class="form-control"
+                  />
+                </div>
+                <div class="col-md-3 mb-3 form-group">
+                  <label for="TourDate">Date</label>
+  
+                  <input
+                    type="text"
+                    formControlName="Date"
+                    class="form-control"
+                  />
+                </div>
+                <div class="col-md-3 mb-3 form-group">
+                  <label for="TourDistance">Distance</label>
+  
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="TourDistance"
+                    placeholder="Distance"
+                  />
+                </div>
+              </div>
+  
+              <div class="form-row">
+                <div class="col-md-3 mb-3 form-group">
+                  <label for="TourImage">Image</label>
+  
+                  <input
+                    type="text"
+                    formControlName="Image"
+                    class="form-control"
+                  />
+                </div>
+                <div class="col-md-3 mb-3 form-group">
+                  <label for="TourRate">Rate</label>
+  
+                  <input
+                    type="text"
+                    formControlName="Rate"
+                    class="form-control"
+                  />
+                </div>
+                <div class="col-md-3 mb-3 form-group">
+                  <label for="TourReviews">Reviews</label>
+  
+                  <input
+                    type="text"
+                    formControlName="Review"
+                    class="form-control"
+                  />
+                </div>
+                <div class="col-md-3 mb-3 form-group">
+                  <label for="TourBooked">Booked</label>
+  
+                  <input
+                    type="text"
+                    formControlName="Booked"
+                    class="form-control"
+                  />
+                </div>
+              </div>
+  
+              <div class="form-row">
+                <div class="col-md-3 mb-3 form-group">
+                  <label for="TourPrice">Price</label>
+  
+                  <input
+                    type="text"
+                    formControlName="Price"
+                    class="form-control"
+                  />
+                </div>
+                <div class="col-md-3 mb-3 form-group">
+                  <label for="TourOldPrice">Old Price</label>
+  
+                  <input
+                    type="text"
+                    formControlName="OldPrice"
+                    class="form-control"
+                  />
+                </div>
+                <div class="col-md-3 mb-3 form-group">
+                  <label for="TourDiscount">Discount</label>
+  
+                  <input
+                    type="text"
+                    formControlName="TourDiscount"
+                    class="form-control"
+                  />
+                </div>
+                <div class="col-md-3 mb-3 form-group">
+                  <label for="TourSectionInner">Section Inner</label>
+  
+                  <input
+                    type="text"
+                    formControlName="TourSectionInner"
+                    class="form-control"
+                  />
+                </div>
+              </div>
+  
+              <div class="form-row"> 
+                  <div class="col-md-4 mb-3 form-group">
+                      <label  for="TourCity">City</label>
+                      <!-- <div class="col-10">City -->
+                        <select class="form-control" formControlName="City" id="City">
+                          <option></option>
+                          <option>Hong Kong</option>
+                          <option>Macau</option>
+                          <option>Cairo</option>
+                          <option>Alex</option>
+                          <option>Shar El Sheikh</option>
+                          <option>Hurghada</option>
+                          <option>Taipei</option>
+                          <option>Singapore</option>
+                          <option>Bangkok</option>
+                          <option>Pattaya</option>
+                          <option>New York</option>
+                          <option>Hokkaido</option>
+                          <option>Cape Town</option>
+                          <option>Rotorua</option>
+                          <option>Siem Reap</option>
+                          <option>Beijing</option>
+                          <option>Barcelona</option>
+                          <option>Hurghada</option>
+          
+          
+          
+                        </select>
+                      <!-- </div> -->
+                    </div>
+                    <div class="col-md-4 mb-3 form-group">
+                      <label  for="TourCategories">Categories</label>
+                      <!-- <div class="col-10"> -->
+                        <select class="form-control" formControlName="Categories" id="Categories">
+                          <option>Home</option>
+                          <option>Relaxation & beauty</option>
+                          <option>Cultural experiences</option>
+                          <option>FunNight</option>
+                          <option>Tours</option>
+                          <option>Europe Train</option>
+                          <option>Food</option>
+                          <option>Experience</option>
+          
+          
+                        </select>
+                      <!-- </div> -->
+                    </div>
+                    <div class="col-md-4 mb-3 form-group">
+                      <label  for="TourSection">Section</label>
+                      <!-- <div class="col-10"> -->
+                        <select class="form-control" formControlName="Section" id="Section">
+                          <option>Get Inspired</option>
+          
+                          <option>Top thing to do</option>
+          
+                          <option>BestSeller</option>
+                          <option>AwsomeDeals</option>
+                          <option>Date Ideas</option>
+                          <option>ForKids</option>
+                          <option>For Tommowrow</option>
+                          <option>Klook Recommended</option>
+                          <option>Near in cairo</option>
+                          <option>Other</option>
+          
+          
+                        </select>
+                      <!-- </div> -->
+                    </div>
+              </div>       
+  
+              <button
+                class="btn btn-primary"
+                (click)="updateThisTour()"
+                [ngStyle]="{ 'background-color': getColor() }"
+                type="submit"
+              >
+                Update Tour
+              </button>
+            </form>
+          </div>
+      </div>
+
+  </div>
+
+  <!-- ============================================================== -->
+  <!-- Start Add Page -->
+  <!-- ============================================================== -->
+<!-- ////////////////////////////////////////////////// -->
+
+
+  <!-- //////////////////////////////////////////// -->
+</div>
