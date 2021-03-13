@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AuthSignService } from 'src/app/services/auth-sign.service';
 
 @Component({
   selector: 'app-dashbord-main',
@@ -37,7 +38,7 @@ export class DashbordMainComponent implements OnInit {
 
 
 
-  constructor(private router:Router) { }
+  constructor(private router:Router,private auth:AuthSignService) { }
 
   ngOnInit(): void {
     this.logosmall='logosmall2'
@@ -253,6 +254,13 @@ wifiFun(){
 
 }
 
+logout(){
+  localStorage.removeItem('currentUser');
+    // localStorage.removeItem('currentUserName');
+
+    this.auth.userLogin=true
+    this.router.navigate(['sign']);
+}
 ngOnChanges(){
   
 }

@@ -40,10 +40,62 @@
             <h2 class="card-title">Wifi ADD</h2>
             <form [formGroup]="loginFrm">
               <div class="form-row">
-                <div class="col-md-3 mb-3 form-group">
+                <div class="col-md-5 mb-3 form-group">
                   <label for="TourID">ID</label>
   
                   <input type="text" formControlName="id" class="form-control" readonly/>
+                </div>
+               
+              </div>
+  
+              <div class="form-row">
+                <div class="col-md-3 mb-3 form-group">
+                  <label for="TourImage">Image</label>
+  
+                  <input
+                    type="text"
+                    formControlName="Image"
+                    class="form-control"
+                  />
+                </div>
+                <div class="col-md-3 mb-3 form-group">
+                  <label for="TourRate">Rate</label>
+  
+                  <input
+                    type="text"
+                    formControlName="Rate"
+                    class="form-control"
+                  />
+                </div>
+                <div class="col-md-3 mb-3 form-group">
+                  <label for="Reviews">Reviews</label>
+  
+                  <input
+                    type="text"
+                    formControlName="Reviews"
+                    class="form-control"
+                  />
+                </div>
+                <div class="col-md-3 mb-3 form-group">
+                  <label for="TourBooked">Booked</label>
+  
+                  <input
+                    type="text"
+                    formControlName="Booked"
+                    class="form-control"
+                  />
+                </div>
+              </div>
+  
+              <div class="form-row">
+                <div class="col-md-3 mb-3 form-group">
+                  <label for="TourPrice">Price</label>
+  
+                  <input
+                    type="text"
+                    formControlName="Price"
+                    class="form-control"
+                  />
                 </div>
                 <div class="col-md-3 mb-3 form-group">
                   <label for="TourTitle">Title</label>
@@ -73,84 +125,7 @@
                     placeholder="Distance"
                   />
                 </div>
-              </div>
-  
-              <div class="form-row">
-                <div class="col-md-3 mb-3 form-group">
-                  <label for="TourImage">Image</label>
-  
-                  <input
-                    type="text"
-                    formControlName="Image"
-                    class="form-control"
-                  />
-                </div>
-                <div class="col-md-3 mb-3 form-group">
-                  <label for="TourRate">Rate</label>
-  
-                  <input
-                    type="text"
-                    formControlName="Rate"
-                    class="form-control"
-                  />
-                </div>
-                <div class="col-md-3 mb-3 form-group">
-                  <label for="TourReviews">Reviews</label>
-  
-                  <input
-                    type="text"
-                    formControlName="Review"
-                    class="form-control"
-                  />
-                </div>
-                <div class="col-md-3 mb-3 form-group">
-                  <label for="TourBooked">Booked</label>
-  
-                  <input
-                    type="text"
-                    formControlName="Booked"
-                    class="form-control"
-                  />
-                </div>
-              </div>
-  
-              <div class="form-row">
-                <div class="col-md-3 mb-3 form-group">
-                  <label for="TourPrice">Price</label>
-  
-                  <input
-                    type="text"
-                    formControlName="Price"
-                    class="form-control"
-                  />
-                </div>
-                <div class="col-md-3 mb-3 form-group">
-                  <label for="TourOldPrice">Old Price</label>
-  
-                  <input
-                    type="text"
-                    formControlName="OldPrice"
-                    class="form-control"
-                  />
-                </div>
-                <div class="col-md-3 mb-3 form-group">
-                  <label for="TourDiscount">Discount</label>
-  
-                  <input
-                    type="text"
-                    formControlName="TourDiscount"
-                    class="form-control"
-                  />
-                </div>
-                <div class="col-md-3 mb-3 form-group">
-                  <label for="TourSectionInner">Section Inner</label>
-  
-                  <input
-                    type="text"
-                    formControlName="TourSectionInner"
-                    class="form-control"
-                  />
-                </div>
+               
               </div>
   
               <div class="form-row">
@@ -226,8 +201,8 @@
                 <tr>
                   <th>#</th>
                   <th>Title</th>
-                  <th>City</th>
-                  <th>Categories</th>
+                  <th>Price</th>
+                  <th>Location</th>
                   
                   <th>Edit</th>
                   <th>Delete</th>
@@ -262,39 +237,12 @@
               <h2 class="card-title">wifi ADD</h2>
               <form [formGroup]="updateFrm">
                 <div class="form-row">
-                  <div class="col-md-3 mb-3 form-group">
+                  <div class="col-md-5 mb-3 form-group">
                     <label for="TourID">ID</label>
     
                     <input type="text" formControlName="id" class="form-control" readonly/>
                   </div>
-                  <div class="col-md-3 mb-3 form-group">
-                    <label for="TourTitle">Title</label>
-    
-                    <input
-                      type="text"
-                      formControlName="Title"
-                      class="form-control"
-                    />
-                  </div>
-                  <div class="col-md-3 mb-3 form-group">
-                    <label for="TourDate">Date</label>
-    
-                    <input
-                      type="text"
-                      formControlName="Date"
-                      class="form-control"
-                    />
-                  </div>
-                  <div class="col-md-3 mb-3 form-group">
-                    <label for="TourDistance">Distance</label>
-    
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="TourDistance"
-                      placeholder="Distance"
-                    />
-                  </div>
+               
                 </div>
     
                 <div class="form-row">
@@ -317,11 +265,11 @@
                     />
                   </div>
                   <div class="col-md-3 mb-3 form-group">
-                    <label for="TourReviews">Reviews</label>
+                    <label for="Reviews">Reviews</label>
     
                     <input
                       type="text"
-                      formControlName="Review"
+                      formControlName="Reviews"
                       class="form-control"
                     />
                   </div>
@@ -347,30 +295,31 @@
                     />
                   </div>
                   <div class="col-md-3 mb-3 form-group">
-                    <label for="TourOldPrice">Old Price</label>
+                    <label for="TourTitle">Title</label>
     
                     <input
                       type="text"
-                      formControlName="OldPrice"
+                      formControlName="Title"
                       class="form-control"
                     />
                   </div>
                   <div class="col-md-3 mb-3 form-group">
-                    <label for="TourDiscount">Discount</label>
+                    <label for="TourDate">Date</label>
     
                     <input
                       type="text"
-                      formControlName="TourDiscount"
+                      formControlName="Date"
                       class="form-control"
                     />
                   </div>
                   <div class="col-md-3 mb-3 form-group">
-                    <label for="TourSectionInner">Section Inner</label>
+                    <label for="TourDistance">Coverage</label>
     
                     <input
                       type="text"
-                      formControlName="TourSectionInner"
                       class="form-control"
+                      id="TourDistance"
+                      placeholder="Distance"
                     />
                   </div>
                 </div>

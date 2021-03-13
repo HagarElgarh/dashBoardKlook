@@ -8,8 +8,17 @@ import { User } from '../ViewModals/user';
 })
 export class AuthSignService {
 
-  userLogin :boolean=false
-  constructor(private fb:AngularFirestore) { }
+  userLogin :boolean=true
+  constructor(private fb:AngularFirestore) {
+
+    if (localStorage.getItem("currentUser") === null) {
+      this.userLogin=true
+    }
+    else{
+      this.userLogin=false
+
+    }
+   }
 
   getalluser(){
    
@@ -91,7 +100,7 @@ export class AuthSignService {
       });
   }
 
-  checkforAdmin(email:string,password:string){
+  checkforAdmin(email?:string,password?:string){
 
     return this.fb.collection<User>('admins', ref => ref.where('Email', '==', email).where('Password', '==', password))
     .snapshotChanges();

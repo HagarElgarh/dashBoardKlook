@@ -42,26 +42,25 @@ export class SignComponent implements OnInit {
     console.log(this.admininfoLogin)
 
 
-//     this.auth.checkforAdmin(this.Email.value,this.Password.value).subscribe((res) => {
+    this.auth.checkforAdmin(this.admininfoLogin.Email,this.admininfoLogin.Password).subscribe((res) => {
 
-//       this.list = res.map(data => {
-//         this.userId=data.payload.doc.id
-//         // this.auth.userId=this.userId
-//       localStorage.setItem('currentUser', this.userId);
-// console.log(this.userId)
-//         // console.log(this.userId)
-//       this.router.navigate(['/']);
-//       // this.authSer.userLogin=true
-//       // console.log(this.authSer.userLogin)
+      this.list = res.map(data => {
+        this.userId=data.payload.doc.id
+        // this.auth.userId=this.userId
+      localStorage.setItem('currentUser', this.userId);
+console.log(this.userId)
+        // console.log(this.userId)
+      this.router.navigate(['/dash/main']);
+      // this.authSer.userLogin=true
+      // console.log(this.authSer.userLogin)
 
 
-//         return {
-//           id: data.payload.doc.id,
-//           ...data.payload.doc.data()
-//         }
-//       });
-      // this.loading = false
-    // }, (err) => console.log(err))
+        return {
+          id: data.payload.doc.id,
+          ...data.payload.doc.data()
+        }
+      });
+    }, (err) => console.log(err))
 
    }
   }

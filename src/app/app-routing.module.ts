@@ -26,7 +26,7 @@ const routes: Routes = [
     loadChildren: () => import('../app/Components/dash-board/dash-board.module').then(m => m.DashBoardModule)
   },
 
-  { path: '', redirectTo: '/admin', pathMatch: 'full' }, //Default Path
+  { path: '', redirectTo: '/dash/main', pathMatch: 'full' }, //Default Path
  
   
   { path: '**', component: NotFoundComponent },
