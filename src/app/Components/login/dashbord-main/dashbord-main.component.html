@@ -162,11 +162,12 @@
                   aria-controls="v-pills-quarter" aria-selected="false"
                    (click)="wifiFun()">Wifi & simiCard</a></li>
 
-                <li><a >Compose Mail</a></li>
+                <li><a class="nav-link" id="v-pills-year-tab" data-toggle="pill" href="#v-pills-year" role="tab"
+                  aria-controls="v-pills-year" aria-selected="false">Hotels</a></li>
               </ul>
             </li>
            
-            <li (click)="navclick('reports')">
+            <!-- <li (click)="navclick('reports')">
                 
                 <a
                   class="{{hasArrow}} waves-effect waves-dark"
@@ -181,7 +182,7 @@
                   ></a
                 >
             
-              </li>
+              </li> -->
             
             <li>
               <a (click)="logout()"
@@ -308,7 +309,8 @@
             
             <li  class="smallNavLi"><a class="smallNavLi" id="v-pills-quarter-tab" data-toggle="pill" href="#v-pills-quarter" role="tab"
                   aria-controls="v-pills-quarter" aria-selected="false" (click)="smalnav()">Wifi & simiCard</a></li>
-            <li class="smallNavLi"><a class="smallNavLi">Centers List</a></li>
+            <li class="smallNavLi"><a class="smallNavLi nav-link" id="v-pills-year-tab" data-toggle="pill" href="#v-pills-year" role="tab"
+              aria-controls="v-pills-year" aria-selected="false">Hotels</a></li>
           </ul>
          
 

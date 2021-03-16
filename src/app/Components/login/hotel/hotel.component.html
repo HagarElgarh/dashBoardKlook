@@ -4,7 +4,7 @@
     <!-- ============================================================== -->
     <div class="row page-titles">
       <div class="col-md-5 align-self-center">
-        <h4 class="text-themecolor">Wifi List</h4>
+        <h4 class="text-themecolor">Hotel List</h4>
       </div>
       <div class="col-md-7 align-self-center text-right">
         <div class="d-flex justify-content-end align-items-center">
@@ -12,7 +12,7 @@
             <li class="breadcrumb-item">
               <a href="javascript:void(0)">Administration</a>
             </li>
-            <li class="breadcrumb-item active">Wifi List</li>
+            <li class="breadcrumb-item active">Hotel List</li>
           </ol>
           <button
             (click)="changeView()"
@@ -37,7 +37,7 @@
       <div class="col-12">
         <div class="card">
           <div class="card-body">
-            <h2 class="card-title">Wifi ADD</h2>
+            <h2 class="card-title">Hotel ADD</h2>
             <form [formGroup]="loginFrm">
               <div class="form-row">
                 <div class="col-md-5 mb-3 form-group">
@@ -50,38 +50,38 @@
   
               <div class="form-row">
                 <div class="col-md-3 mb-3 form-group">
-                  <label for="TourImage">Image</label>
+                  <label for="TitleHotel">TitleHotel</label>
   
                   <input
                     type="text"
-                    formControlName="Image"
+                    formControlName="TitleHotel"
                     class="form-control"
                   />
                 </div>
                 <div class="col-md-3 mb-3 form-group">
-                  <label for="TourRate">Rate</label>
+                  <label for="TourRate">Section</label>
   
                   <input
                     type="text"
-                    formControlName="Rate"
+                    formControlName="Section"
                     class="form-control"
                   />
                 </div>
                 <div class="col-md-3 mb-3 form-group">
-                  <label for="Reviews">Reviews</label>
+                  <label for="ReviewHotel">ReviewHotel</label>
   
                   <input
                     type="text"
-                    formControlName="Reviews"
+                    formControlName="ReviewHotel"
                     class="form-control"
                   />
                 </div>
                 <div class="col-md-3 mb-3 form-group">
-                  <label for="TourBooked">Booked</label>
+                  <label for="BookedHotel">BookedHotel</label>
   
                   <input
                     type="text"
-                    formControlName="Booked"
+                    formControlName="BookedHotel"
                     class="form-control"
                   />
                 </div>
@@ -89,39 +89,39 @@
   
               <div class="form-row">
                 <div class="col-md-3 mb-3 form-group">
-                  <label for="TourPrice">Price</label>
+                  <label for="CityHotel">CityHotel</label>
   
                   <input
                     type="text"
-                    formControlName="Price"
+                    formControlName="CityHotel"
                     class="form-control"
                   />
                 </div>
                 <div class="col-md-3 mb-3 form-group">
-                  <label for="TourTitle">Title</label>
+                  <label for="DateHotel">DateHotel</label>
   
                   <input
                     type="text"
-                    formControlName="Title"
+                    formControlName="DateHotel"
                     class="form-control"
                   />
                 </div>
                 <div class="col-md-3 mb-3 form-group">
-                  <label for="TourDate">Date</label>
+                  <label for="Degree">Degree</label>
   
                   <input
                     type="text"
-                    formControlName="Date"
+                    formControlName="Degree"
                     class="form-control"
                   />
                 </div>
                 <div class="col-md-3 mb-3 form-group">
-                  <label for="TourDistance">Coverage</label>
+                  <label for="Image">Image</label>
   
                   <input
                     type="text"
                     class="form-control"
-                    id="TourDistance"
+                    id="Image"
                     placeholder="Distance"
                   />
                 </div>
@@ -130,38 +130,38 @@
   
               <div class="form-row">
                 <div class="col-md-3 mb-3 form-group">
-                  <label for="Internet">Internet</label>
+                  <label for="Oldprice">Oldprice</label>
   
                   <input
                     type="text"
-                    formControlName="Internet"
+                    formControlName="Oldprice"
                     class="form-control"
                   />
                 </div>
                 <div class="col-md-3 mb-3 form-group">
-                  <label for="Location">Location</label>
+                  <label for="Premium">Premium</label>
   
                   <input
                     type="text"
-                    formControlName="Location"
+                    formControlName="Premium"
                     class="form-control"
                   />
                 </div>
                 <div class="col-md-3 mb-3 form-group">
-                  <label for="Service">Service</label>
+                  <label for="PriceHotel">PriceHotel</label>
   
                   <input
                     type="text"
-                    formControlName="Service"
+                    formControlName="PriceHotel"
                     class="form-control"
                   />
                 </div>
                 <div class="col-md-3 mb-3 form-group">
-                  <label for="Validity">Validity</label>
+                  <label for="RateHotel">RateHotel</label>
   
                   <input
                     type="text"
-                    formControlName="Validity"
+                    formControlName="RateHotel"
                     class="form-control"
                   />
                 </div>
@@ -193,16 +193,16 @@
     <div *ngIf="!formsBool">
       <div class="card" *ngIf="!formsUpdate">
         <div class="card-body">
-          <h2 class="card-title">wifi List</h2>
+          <h2 class="card-title">Hotel List</h2>
           <!-- <h6 class="card-subtitle">Add class <code>.color-table .danger-table</code></h6> -->
           <div class="table-responsive">
             <table class="table color-table">
               <thead [ngStyle]="{ 'background-color': getColor() }">
                 <tr>
                   <th>#</th>
-                  <th>Title</th>
-                  <th>Price</th>
-                  <th>Location</th>
+                  <th>TitleHotel</th>
+                  <th>CityHotel</th>
+                  <th>Premium</th>
                   
                   <th>Edit</th>
                   <th>Delete</th>
@@ -211,9 +211,9 @@
               <tbody>
                 <tr *ngFor="let item of dataSourceadmin">
                   <td>1</td>
-                  <td>{{item.Title}}</td>
-                  <td>{{item.Price}}</td>
-                  <td>{{item.Location}}</td>
+                  <td>{{item.TitleHotel}}</td>
+                  <td>{{item.CityHotel}}</td>
+                  <td>{{item.Premium}}</td>
                   
                   
                   <td>
@@ -234,7 +234,7 @@
       </div>
           <div class="card" *ngIf="formsUpdate">
             <div class="card-body">
-              <h2 class="card-title">wifi ADD</h2>
+              <h2 class="card-title">Hotel ADD</h2>
               <form [formGroup]="updateFrm">
                 <div class="form-row">
                   <div class="col-md-5 mb-3 form-group">
@@ -247,38 +247,38 @@
     
                 <div class="form-row">
                   <div class="col-md-3 mb-3 form-group">
-                    <label for="TourImage">Image</label>
+                    <label for="TitleHotel">TitleHotel</label>
     
                     <input
                       type="text"
-                      formControlName="Image"
+                      formControlName="TitleHotel"
                       class="form-control"
                     />
                   </div>
                   <div class="col-md-3 mb-3 form-group">
-                    <label for="TourRate">Rate</label>
+                    <label for="TourRate">Section</label>
     
                     <input
                       type="text"
-                      formControlName="Rate"
+                      formControlName="Section"
                       class="form-control"
                     />
                   </div>
                   <div class="col-md-3 mb-3 form-group">
-                    <label for="Reviews">Reviews</label>
+                    <label for="ReviewHotel">ReviewHotel</label>
     
                     <input
                       type="text"
-                      formControlName="Reviews"
+                      formControlName="ReviewHotel"
                       class="form-control"
                     />
                   </div>
                   <div class="col-md-3 mb-3 form-group">
-                    <label for="TourBooked">Booked</label>
+                    <label for="TourBooked">BookedHotel</label>
     
                     <input
                       type="text"
-                      formControlName="Booked"
+                      formControlName="BookedHotel"
                       class="form-control"
                     />
                   </div>
@@ -286,78 +286,78 @@
     
                 <div class="form-row">
                   <div class="col-md-3 mb-3 form-group">
-                    <label for="TourPrice">Price</label>
+                    <label for="TourPrice">CityHotel</label>
     
                     <input
                       type="text"
-                      formControlName="Price"
+                      formControlName="CityHotel"
                       class="form-control"
                     />
                   </div>
                   <div class="col-md-3 mb-3 form-group">
-                    <label for="TourTitle">Title</label>
+                    <label for="DateHotel">DateHotel</label>
     
                     <input
                       type="text"
-                      formControlName="Title"
+                      formControlName="DateHotel"
                       class="form-control"
                     />
                   </div>
                   <div class="col-md-3 mb-3 form-group">
-                    <label for="TourDate">Date</label>
+                    <label for="Degree">Degree</label>
     
                     <input
                       type="text"
-                      formControlName="Date"
+                      formControlName="Degree"
                       class="form-control"
                     />
                   </div>
                   <div class="col-md-3 mb-3 form-group">
-                    <label for="TourDistance">Coverage</label>
+                    <label for="Image">Image</label>
     
                     <input
                       type="text"
                       class="form-control"
-                      id="TourDistance"
-                      placeholder="Distance"
+                      id="Image"
+                      placeholder="Image"
                     />
                   </div>
                 </div>
     
                 <div class="form-row">
                   <div class="col-md-3 mb-3 form-group">
-                    <label for="Internet">Internet</label>
+                    <label for="Oldprice">Oldprice</label>
     
                     <input
                       type="text"
-                      formControlName="Internet"
+                      formControlName="Oldprice"
                       class="form-control"
                     />
                   </div>
                   <div class="col-md-3 mb-3 form-group">
-                    <label for="Location">Location</label>
+                    <label for="Premium">Premium</label>
     
                     <input
                       type="text"
-                      formControlName="Location"
+                      formControlName="Premium"
                       class="form-control"
                     />
                   </div>
                   <div class="col-md-3 mb-3 form-group">
-                    <label for="Service">Service</label>
+                    <label for="PriceHotel">PriceHotel</label>
     
                     <input
                       type="text"
-                      formControlName="Service"
+                      formControlName="PriceHotel"
                       class="form-control"
                     />
                   </div>
                   <div class="col-md-3 mb-3 form-group">
-                    <label for="Validity">Validity</label>
+                    <label for="RateHotel">RateHotel</label>
     
                     <input
                       type="text"
-                      formControlName="Validity"
+                      formControlName="RateHotel"
                       class="form-control"
                     />
                   </div>

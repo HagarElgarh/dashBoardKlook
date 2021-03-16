@@ -10,7 +10,7 @@ import { User } from 'src/app/ViewModals/user';
   styleUrls: ['./sign.component.scss']
 })
 export class SignComponent implements OnInit {
-
+ 
   adminFrm: FormGroup
   admininfo:User={}
 
@@ -19,7 +19,7 @@ export class SignComponent implements OnInit {
     this.adminFrm=this.fb.group({
    
       id:[this.admininfo.id],
-      Email:[this.admininfo.Email],
+      Email: new FormControl(this.admininfo.Email,[Validators.required,Validators.email]),
       Password:[this.admininfo.Password],
       JoinDate:[this.admininfo.JoinDate]
   

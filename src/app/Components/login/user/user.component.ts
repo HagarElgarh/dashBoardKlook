@@ -20,8 +20,8 @@ export class UserComponent implements OnInit {
   dataSourceadmin: User[] = [];
   tourupdate: Tours[] = [];
   tourupdatedispaly: Tours[] = [];
-  displayedColumns: string[] = ['Email', 'JoinDate', 'Delete','Update'];
-  displayedColumnsadmin: string[] = ['Email', 'JoinDate', 'Delete','Update'];
+  displayedColumns: string[] = ['Email',  'Delete','Update'];
+  displayedColumnsadmin: string[] = ['Email', 'Delete','Update'];
   searchkey:string='egy'
   itemToEdit: Tours={};
   userId:string='';
@@ -54,7 +54,7 @@ export class UserComponent implements OnInit {
       id:[this.userinfo.id],
       Email:[this.userinfo.Email],
       Password:[this.userinfo.Password],
-      JoinDate:[this.userinfo.JoinDate]
+      // JoinDate:[this.userinfo.JoinDate]
   
   
   
@@ -169,7 +169,7 @@ export class UserComponent implements OnInit {
 
   // this.listadd.Email=this.Email.value;
   // this.listadd.Password=this.Password.value;
-  this.listadd.JoinDate=Date.now()
+  // this.listadd.JoinDate=Date.now()
   
   console.log(this.listadd)
 
@@ -310,7 +310,7 @@ inprice4:string=''
       id:[this.userinfo.id],
       Email:[this.userinfo.Email],
       Password:[this.userinfo.Password],
-      JoinDate:[this.userinfo.JoinDate]
+      // JoinDate:[this.userinfo.JoinDate]
   
   
   

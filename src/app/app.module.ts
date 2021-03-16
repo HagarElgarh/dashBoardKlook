@@ -34,6 +34,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatTableModule } from '@angular/material/table';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+// import { HotelComponent } from './Components/login/hotel/hotel.component';
 // import { AdminsComponent } from './Components/admins/admins.component';
 // import { TourCollectionComponent } from './Components/login/tour-collection/tour-collection.component';
 // import { CitiesComponent } from './Components/login/cities/cities.component';
@@ -73,6 +74,7 @@ var firebaseConfig = {
     NotFoundComponent,
     AMlistComponent,
     PMlistComponent,
+    // HotelComponent,
     // UsersComponent,
     // DashdetailsComponent,
     // AdminsComponent,

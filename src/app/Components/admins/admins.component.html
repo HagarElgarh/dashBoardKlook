@@ -3,7 +3,7 @@
     <div class="col-12">
         <div class="card">
             <div class="card-body">
-              <h2 class="card-title">Admin ADD</h2>
+              <h2 class="card-title">Admin </h2>
 <div *ngIf="!signBoolupdate">
     <button mat-flat-button class="ml-4 container btnchange" (click)="sign()">{{btnAdmiText}}</button>
 
@@ -27,14 +27,18 @@
         <ng-container matColumnDef="Delete">
           <th mat-header-cell *matHeaderCellDef> Delete </th>
           <td mat-cell *matCellDef="let element">
-            <button mat-flat-button class=" btndelet" (click)="delete(element.id)">Delete</button>
+            <i class="fas fa-trash-alt" (click)="delete(element.id)"></i>
+
+            <!-- <button mat-flat-button class=" btndelet" (click)="delete(element.id)">Delete</button> -->
           </td>
         </ng-container>
 
         <ng-container matColumnDef="Update">
           <th mat-header-cell *matHeaderCellDef> Update </th>
           <td mat-cell *matCellDef="let element">
-            <button mat-flat-button class=" btndelet" (click)="updatebtn(element)" >Update</button>
+            <i class="fas fa-pencil-alt" (click)="updatebtn(element)" ></i>
+
+            <!-- <button mat-flat-button class=" btndelet" (click)="updatebtn(element)" >Update</button> -->
           </td>
         </ng-container>
 
@@ -56,7 +60,7 @@
 
 
     <mat-form-field appearance="outline" class="w-75 ">
-      <input matInput placeholder="Password" class="mb-2" [formControl]="Password" required>
+      <input matInput type="password" placeholder="Password" class="mb-2" [formControl]="Password" required>
       <mat-error *ngIf="Password.invalid && (Password.dirty || Password.touched)">{{getErrorMessagepass()}}</mat-error>
       <!-- <input matInput placeholder="Password" class="mb-2"> -->
       <mat-icon matSuffix><i class="far fa-eye-slash faico"></i>

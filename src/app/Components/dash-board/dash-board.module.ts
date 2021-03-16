@@ -33,6 +33,7 @@ import { UsersComponent } from '../login/users/users.component';
 import { DashdetailsComponent } from '../login/dashdetails/dashdetails.component';
 import { UserComponent } from '../login/user/user.component';
 import { GuardAuthService } from 'src/app/services/guard-auth.service.guard';
+import { HotelComponent } from '../login/hotel/hotel.component';
 
 const routes: Routes = [
   { path: 'main', component: DashbordMainComponent ,canActivate: [GuardAuthService] },
@@ -51,7 +52,8 @@ const routes: Routes = [
     WifiComponent,
     DashdetailsComponent,
     UsersComponent,
-    UserComponent
+    UserComponent,
+    HotelComponent
   ],
   imports: [
     RouterModule.forChild(routes),
