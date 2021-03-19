@@ -229,7 +229,7 @@
               [ngStyle]="{ 'background-color': getColor() }"
               type="submit"
             >
-              Submit form
+              Add Tour
             </button>
           </form>
         </div>
@@ -254,7 +254,7 @@
           <table class="table color-table">
             <thead [ngStyle]="{ 'background-color': getColor() }">
               <tr>
-                <th>#</th>
+                <!-- <th>#</th> -->
                 <th>Title</th>
                 <th>City</th>
                 <th>Categories</th>
@@ -265,7 +265,7 @@
             </thead>
             <tbody>
               <tr *ngFor="let item of dataSourceadmin">
-                <td>1</td>
+                <!-- <td>1</td> -->
                 <td>{{item.Title}}</td>
                 <td>{{item.City}}</td>
                 <td>{{item.Categories}}</td>

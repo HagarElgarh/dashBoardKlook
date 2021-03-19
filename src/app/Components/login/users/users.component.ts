@@ -25,8 +25,8 @@ export class UsersComponent implements OnInit {
   dataSourceadmin: User[] = [];
   tourupdate: Tours[] = [];
   tourupdatedispaly: Tours[] = [];
-  displayedColumns: string[] = ['Email', 'JoinDate', 'Delete','Update'];
-  displayedColumnsadmin: string[] = ['Email', 'JoinDate', 'Delete','Update'];
+  displayedColumns: string[] = ['Email', 'JoinDate', 'Delete'];
+  displayedColumnsadmin: string[] = ['Email', 'JoinDate', 'Delete'];
   searchkey:string='egy'
   itemToEdit: Tours={};
   userId:string='';
@@ -320,7 +320,7 @@ inprice4:string=''
   
   
       });
-
+ 
 
   }
   updateuser(){
@@ -333,6 +333,6 @@ inprice4:string=''
   
     this.authSer.updateUsers(this.userinfo)
   }
-
+ 
 
 }

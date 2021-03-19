@@ -44,18 +44,18 @@ export class TourCollectionComponent implements OnInit {
     this.loginFrm=fb.group({
    
       // id:['']
-        Booked:['']
+        Booked:['2K']
         ,Categories:['']
         ,City:['']
         ,Date:['']
-        ,Image:['']
-        ,OldPrice:['']
-        ,Price:['']
-        ,Rate:['']
-        ,Review:['']
+        ,Image:['https://firebasestorage.googleapis.com/v0/b/friendlychat-e399d.appspot.com/o/Tours%2F36.jpg?alt=media&token=f2821bd1-e28e-48cb-b968-25448f6b433b']
+        ,OldPrice:['250']
+        ,Price:['200']
+        ,Rate:['5.2']
+        ,Review:['25']
         ,Section:['']
         ,Title:['']
-        ,TourDiscount:['']
+        ,TourDiscount:['10%']
         ,TourSectionInner:['']
   
   
@@ -104,6 +104,7 @@ export class TourCollectionComponent implements OnInit {
     console.log(this.loginFrm.value)
     console.log(this.list)
     this.collSer.addToTours(this.list)
+    this.formsBool=!this.formsBool;
     
   }
 

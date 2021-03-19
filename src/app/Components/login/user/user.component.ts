@@ -20,8 +20,8 @@ export class UserComponent implements OnInit {
   dataSourceadmin: User[] = [];
   tourupdate: Tours[] = [];
   tourupdatedispaly: Tours[] = [];
-  displayedColumns: string[] = ['Email',  'Delete','Update'];
-  displayedColumnsadmin: string[] = ['Email', 'Delete','Update'];
+  displayedColumns: string[] = ['Email',  'Delete'];
+  displayedColumnsadmin: string[] = ['Email', 'Delete'];
   searchkey:string='egy'
   itemToEdit: Tours={};
   userId:string='';
